@@ -1,0 +1,6 @@
+{
+  "name": "Mr X Space",
+  "description": "Premium tech store specializing in iPhones, Samsung devices, laptops, gadgets, and accessories with a stunning futuristic space aesthetic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

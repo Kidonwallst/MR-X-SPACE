@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Sophisticated Dark Palette override variables */
+  --color-accent-cyan: #00F0FF;
+  /* Tailwind token overrides to perfectly propagate the style automatically */
+  --color-cyan-400: #00F0FF;
+  --color-cyan-500: #00F0FF;
+  --color-cyan-600: #00CFE5;
+  --color-cyan-950: rgba(0, 240, 255, 0.05);
+  
+  --color-purple-950: rgba(255, 255, 255, 0.05); /* Make standard lines look like glass card borders */
+  --color-purple-900: rgba(188, 0, 255, 0.15);    /* Transparent neon accent */
+  --color-purple-800: #BC00FF;                   /* Sophisticated Neon Purple color */
+  --color-purple-600: #BC00FF;
+  --color-purple-500: #BC00FF;
+  --color-purple-400: #BC00FF;
+  --color-purple-300: #E685FF;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020205;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(188, 0, 255, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BC00FF;
+}
+
+/* Global Body Styling for Sophisticated Dark Theme */
+body, .space-bg {
+  background-color: #020205 !important;
+  background-image: radial-gradient(circle at top right, #1a0b2e 0%, #020205 60%) !important;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Sophisticated Dark Design Helper Classes */
+.space-gradient {
+  background: radial-gradient(circle at top right, #1a0b2e 0%, #020205 60%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.neon-border-cyan {
+  border-bottom: 2px solid #00F0FF !important;
+  box-shadow: 0 4px 10px rgba(0, 240, 255, 0.2) !important;
+}
+
+.neon-text-purple {
+  color: #BC00FF !important;
+  text-shadow: 0 0 10px rgba(188, 0, 255, 0.5) !important;
+}
+
+.accent-cyan {
+  color: #00F0FF !important;
+}
+
+.whatsapp-green {
+  color: #25D366 !important;
+}
+
+.coming-soon {
+  font-size: 10px;
+  background: rgba(188, 0, 255, 0.2) !important;
+  color: #BC00FF !important;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.floating-contact {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 50;
+}
+
+.contact-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.2s;
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #00F0FF !important;
+  color: #000000 !important;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+/* Enhancements for lists and navigation items to feel high-fidelity glass-card items */
+.group\.relative, .bg-\[\#090616\]\/75, .bg-\[\#090616\]\/70, .bg-\[\#090616\]\/50, .bg-\[\#090616\]\/40 {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Buttons mapping from standard look to clean Sophisticated Dark elements */
+.bg-gradient-to-r\.from-purple-800\.to-cyan-500, .bg-gradient-to-r\.from-purple-800\.to-cyan-600 {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+.bg-gradient-to-r\.from-purple-800\.to-cyan-500:hover, .bg-gradient-to-r\.from-purple-800\.to-cyan-600:hover {
+  background: #00F0FF !important;
+  color: #000000 !important;
+}
