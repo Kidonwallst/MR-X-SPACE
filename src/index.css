@@ -6,90 +6,245 @@
   --font-space: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
   
-  /* Sophisticated Dark Palette override variables */
-  --color-accent-cyan: #00F0FF;
-  /* Tailwind token overrides to perfectly propagate the style automatically */
-  --color-cyan-400: #00F0FF;
-  --color-cyan-500: #00F0FF;
-  --color-cyan-600: #00CFE5;
-  --color-cyan-950: rgba(0, 240, 255, 0.05);
+  /* Redefine accent, cyan and purple to gorgeous, luxurious Gold Palette */
+  --color-accent-cyan: #C5A059;
   
-  --color-purple-950: rgba(255, 255, 255, 0.05); /* Make standard lines look like glass card borders */
-  --color-purple-900: rgba(188, 0, 255, 0.15);    /* Transparent neon accent */
-  --color-purple-800: #BC00FF;                   /* Sophisticated Neon Purple color */
-  --color-purple-600: #BC00FF;
-  --color-purple-500: #BC00FF;
-  --color-purple-400: #BC00FF;
-  --color-purple-300: #E685FF;
+  /* Override cyan tokens used in Tailwind classes to Gold values */
+  --color-cyan-400: #D4AF37;
+  --color-cyan-500: #C5A059;
+  --color-cyan-600: #AA823C;
+  --color-cyan-950: rgba(197, 160, 89, 0.05);
+  
+  /* Override purple tokens to Champagne/Gold tone so all glass boards read as elegant white/gold */
+  --color-purple-950: rgba(188, 160, 115, 0.15); /* Delicate gold borders */
+  --color-purple-900: rgba(197, 160, 89, 0.06);   /* Warm luxury glass tint */
+  --color-purple-800: #C5A059;                    /* Rich Gold primary */
+  --color-purple-700: #AA823C;
+  --color-purple-600: #BCA374;
+  --color-purple-500: #C5A059;
+  --color-purple-400: #D4AF37;
+  --color-purple-300: #EADBC8;
+  --color-purple-200: #F1DEC9;
 }
 
-/* Custom scrollbars */
+/* Custom golden scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020205;
+  background: #FAF9F6;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(188, 0, 255, 0.4);
+  background: rgba(197, 160, 89, 0.3);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #BC00FF;
+  background: #C5A059;
 }
 
-/* Global Body Styling for Sophisticated Dark Theme */
+/* Global Light Luxury Alabaster Theme for Body */
 body, .space-bg {
-  background-color: #020205 !important;
-  background-image: radial-gradient(circle at top right, #1a0b2e 0%, #020205 60%) !important;
-  color: #ffffff;
+  background-color: #FAF9F6 !important;
+  background-image: radial-gradient(circle at top right, #ffffff 0%, #FAF9F6 100%) !important;
+  color: #1C1917 !important;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Sophisticated Dark Design Helper Classes */
-.space-gradient {
-  background: radial-gradient(circle at top right, #1a0b2e 0%, #020205 60%);
+/* Redefine background layout components to clean elegant crisp white */
+header, 
+footer,
+select,
+input,
+textarea,
+.glass-card,
+.bg-purple-950\/20,
+.bg-\[\#090616\]\/75,
+.bg-\[\#090616\]\/70,
+.bg-\[\#090616\]\/50,
+.bg-\[\#090616\]\/40,
+.bg-\[\#03000b\],
+.bg-\[\#03000a\],
+.bg-\[\#020205\] {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  color: #1C1917 !important;
 }
 
-.glass-card {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+/* Redefine card-borders and line-dividers to subtle warm gold edges */
+.border-purple-950,
+.border-purple-950\/20,
+.border-purple-950\/30,
+.border-purple-950\/40,
+.border-purple-950\/50,
+.border-purple-950\/60,
+.border-purple-950\/65,
+.border-purple-950\/70,
+.border-purple-900\/30,
+.border-purple-900\/40,
+.border-cyan-500\/40,
+.border-white\/10 {
+  border-color: rgba(197, 160, 89, 0.18) !important;
 }
 
-.neon-border-cyan {
-  border-bottom: 2px solid #00F0FF !important;
-  box-shadow: 0 4px 10px rgba(0, 240, 255, 0.2) !important;
+/* Text fields and input overrides inside white-gold containers */
+input, select, textarea {
+  background-color: #FAF9F6 !important;
+  border: 1px solid rgba(197, 160, 89, 0.3) !important;
+  color: #1C1917 !important;
 }
 
+input::placeholder, textarea::placeholder {
+  color: #8B867A !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #C5A059 !important;
+}
+
+/* Text elements & contrast enhancements */
+h1, h2, h3, h4, h5, h6 {
+  color: #1c1917 !important;
+}
+
+/* Ensure white header titles and descriptions stand out as deep premium black/gold */
+.text-white, 
+.text-gray-100, 
+.text-gray-200 {
+  color: #1C1917 !important;
+}
+
+/* Muted or faint text styling elements -> converted to luxury bronze-charcoal descriptions */
+.text-gray-300,
+.text-gray-400,
+.text-gray-450,
+.text-gray-500,
+.text-purple-300,
+.text-purple-300\/40,
+.text-cyan-400\/90 {
+  color: #5D5A54 !important;
+}
+
+/* Keep gold labels pristine and vibrant rather than white/gray */
+.text-cyan-300,
+.text-cyan-400,
+.text-purple-400,
+.accent-cyan,
 .neon-text-purple {
-  color: #BC00FF !important;
-  text-shadow: 0 0 10px rgba(188, 0, 255, 0.5) !important;
+  color: #B89047 !important;
 }
 
-.accent-cyan {
-  color: #00F0FF !important;
+/* Standard Gradients mappings for white & gold luxury accent styling */
+.space-gradient {
+  background: radial-gradient(circle at top right, #ffffff 0%, #FAF9F6 100%) !important;
 }
 
-.whatsapp-green {
-  color: #25D366 !important;
+/* Decorative background glowing spheres in ambient champagne shades */
+.cosmic-nebula-left {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(197, 160, 89, 0.04) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cosmic-nebula-right {
+  position: absolute;
+  top: 40%;
+  right: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(229, 193, 88, 0.05) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom premium badge rules */
+.product-badge {
+  background: #C5A059 !important;
+  color: #ffffff !important;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .coming-soon {
   font-size: 10px;
-  background: rgba(188, 0, 255, 0.2) !important;
-  color: #BC00FF !important;
-  padding: 2px 6px;
-  border-radius: 4px;
+  background: rgba(197, 160, 89, 0.12) !important;
+  color: #AA823C !important;
+  padding: 3px 8px;
+  border-radius: 6px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
+/* Button overrides - transform standard flashy dark buttons to luxury gold-themed button buttons */
+.bg-gradient-to-r\.from-purple-800\.to-cyan-500,
+.bg-gradient-to-r\.from-purple-800\.to-cyan-600,
+.bg-purple-950,
+#detail-buy-now-btn,
+#checkout-place-order-final,
+.bg-gradient-to-tr\.from-purple-800\.to-cyan-500,
+button.bg-gradient-to-r,
+button.bg-purple-950 {
+  background: linear-gradient(135deg, #C5A059 0%, #B89047 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid #AA823C !important;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.2) !important;
+}
+
+/* Hover behaviors for premium gold buttons */
+.bg-gradient-to-r\.from-purple-800\.to-cyan-500:hover,
+.bg-gradient-to-r\.from-purple-800\.to-cyan-600:hover,
+.bg-purple-900:hover,
+#detail-buy-now-btn:hover,
+#checkout-place-order-final:hover,
+button.bg-gradient-to-r:hover,
+button.bg-purple-950:hover {
+  background: linear-gradient(135deg, #AA823C 0%, #C5A059 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(197, 160, 89, 0.35) !important;
+}
+
+/* Protect Green WhatsApp Buttons, Call/Direct utility contact links so those always remain legible */
+button.bg-\[\#25D366\],
+.bg-\[\#25D366\],
+#detail-enquire-whatsapp-btn {
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+  border-color: #20ba59 !important;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.15) !important;
+}
+
+button.bg-\[\#25D366\]:hover,
+.bg-\[\#25D366\]:hover,
+#detail-enquire-whatsapp-btn:hover {
+  background-color: #20ba59 !important;
+  color: #ffffff !important;
+}
+
+a.text-\[\#25D366\],
+.text-\[\#25D366\] {
+  color: #1e7e34 !important; /* Muted dark green for text links for light bg readability */
+}
+
+/* Ensure the app main container has relative positioning with Z-index to clear glows */
+#app-header, #app-footer, main {
+  position: relative;
+  z-index: 10;
+}
+
+/* Floating contacts design tuning */
 .floating-contact {
   position: fixed;
   right: 24px;
@@ -105,40 +260,18 @@ body, .space-bg {
   height: 44px;
   border-radius: 50%;
   display: flex;
-  items: center;
+  align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: #ffffff !important;
+  color: #1c1917 !important;
+  border: 1px solid rgba(197, 160, 89, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
   transition: all 0.2s;
 }
 
-.product-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #00F0FF !important;
-  color: #000000 !important;
-  font-size: 10px;
-  font-weight: 800;
-  padding: 2px 6px;
-  border-radius: 2px;
-}
-
-/* Enhancements for lists and navigation items to feel high-fidelity glass-card items */
-.group\.relative, .bg-\[\#090616\]\/75, .bg-\[\#090616\]\/70, .bg-\[\#090616\]\/50, .bg-\[\#090616\]\/40 {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-/* Buttons mapping from standard look to clean Sophisticated Dark elements */
-.bg-gradient-to-r\.from-purple-800\.to-cyan-500, .bg-gradient-to-r\.from-purple-800\.to-cyan-600 {
-  background: #ffffff !important;
-  color: #000000 !important;
-}
-
-.bg-gradient-to-r\.from-purple-800\.to-cyan-500:hover, .bg-gradient-to-r\.from-purple-800\.to-cyan-600:hover {
-  background: #00F0FF !important;
-  color: #000000 !important;
+.contact-btn:hover {
+  background: #C5A059 !important;
+  color: #ffffff !important;
+  border-color: #AA823C !important;
+  transform: translateY(-2px);
 }
