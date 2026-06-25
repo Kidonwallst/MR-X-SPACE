@@ -51,6 +51,15 @@ export default function ProductCard({
             -{product.discountPercent}%
           </span>
         )}
+        {product.condition && (
+          <span className={`font-space font-bold text-[9px] uppercase tracking-wider px-2 py-1 rounded-md shadow-sm ${
+            product.condition.toLowerCase() === 'new'
+              ? 'bg-[#C5A059] text-white border border-[#AA823C]'
+              : 'bg-stone-200 text-stone-700 border border-stone-300'
+          }`}>
+            {product.condition}
+          </span>
+        )}
       </div>
 
       {/* Product Image Section - Space Tech-Themed Placeholder Canvas */}

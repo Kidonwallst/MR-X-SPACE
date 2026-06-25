@@ -65,7 +65,7 @@ export default function ProductDetail({
   };
 
   const handleEnquireWhatsAppClick = () => {
-    const msg = `Hello Mr X Space! 👋 I am interested in the ${product.name} priced at ₦${product.price.toLocaleString('en-NG')} (Armor shade: ${selectedColor || 'Default'}${selectedStorage ? `, Storage: ${selectedStorage}` : ''}). Is it available at your Lagos outlet?`;
+    const msg = `Hello Mr X Space! 👋 I am interested in the ${product.name} priced at ₦${product.price.toLocaleString('en-NG')} (Armor shade: ${selectedColor || 'Default'}${selectedStorage ? `, Storage: ${selectedStorage}` : ''}). Is it available at your Port Harcourt outlet?`;
     window.open(`https://wa.me/2347076725564?text=${encodeURIComponent(msg)}`, '_blank');
     onSuccessToast("💬 Launching WhatsApp enquiry...");
   };
@@ -176,9 +176,20 @@ export default function ProductDetail({
               </button>
             </div>
 
-            <h2 className="font-space font-extrabold text-2xl sm:text-3xl text-white tracking-tight mt-3">
-              {product.name}
-            </h2>
+            <div className="flex flex-wrap items-center gap-3 mt-3">
+              <h2 className="font-space font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+                {product.name}
+              </h2>
+              {product.condition && (
+                <span className={`font-space font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-md shadow-sm border ${
+                  product.condition.toLowerCase() === 'new'
+                    ? 'bg-[#C5A059] text-white border-[#AA823C]'
+                    : 'bg-stone-200 text-stone-700 border-stone-300'
+                }`}>
+                  {product.condition}
+                </span>
+              )}
+            </div>
 
             {/* Ratings row */}
             <div className="flex items-center gap-2 mt-2">

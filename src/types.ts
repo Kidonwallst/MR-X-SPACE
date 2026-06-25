@@ -18,6 +18,7 @@ export interface Product {
   isHot?: boolean;
   discountPercent?: number;
   originalPrice?: number;
+  condition?: string;
 }
 
 export interface CartItem {
